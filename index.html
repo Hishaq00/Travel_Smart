@@ -1,0 +1,1203 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css?family=Rufina:400,700" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet" />
+	<link rel="stylesheet" href="assets/css/font-awesome.min.css" />
+	<link rel="stylesheet" href="assets/css/animate.css" />
+	<link rel="stylesheet" href="assets/css/hover-min.css">
+	<link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+	<link rel="stylesheet" href="assets/css/owl.theme.default.min.css" />
+	<link rel="stylesheet" href="assets/css/jquery-ui.min.css" />
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="assets/css/bootsnav.css" />
+	<link rel="stylesheet" href="assets/css/style.css" />
+	<link rel="stylesheet" href="assets/css/responsive.css" />
+	<link href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" rel="stylesheet">
+	
+	<title>TravelSmarter</title>
+</head>
+<body>
+	<!-- NAVBAR START  -->
+	<header class="top-area">
+		<div class="header-area">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-2">
+						<div class="logo">
+							<a href="index.html">
+								Traval<span> Smart</span>
+							</a>
+						</div>
+					</div>
+					<div class="col-sm-10">
+						<div class="main-menu">
+							<div class="navbar-header">
+								<button type="button" class="navbar-toggle" data-toggle="collapse"
+									data-target=".navbar-collapse">
+									<i class="fa fa-bars"></i>
+								</button>
+							</div>
+							<div class="collapse navbar-collapse">
+								<ul class="nav navbar-nav navbar-right">
+									<li class="smooth-menu"><a href="#home">home</a></li>
+									<li class="smooth-menu"><a href="#filter">Trip Catalog</a></li>
+									<li class="smooth-menu"><a href="#about">About Us</a></li>
+									<li class="smooth-menu"><a href="#subs">Contact Us</a></li>
+									<li class="smooth-menu"><a href="" id="openModalBtn">Feedback</a> </li>
+									<li class="smooth-menu"><a href="" id="login-modal-btn">LogIn</a></li>
+									<li class="smooth-menu"><a href="" id="signup-modal-btn">Sign Up</a></li>
+									<!-- Login Modal -->
+									<div id="login-modal" class="modal-overlay" style="display: none;">
+										<div class="modal-content">
+											<span class="close-btn" id="login-modal-close">&times;</span>
+											<h2>Login</h2>
+											<form id="login-form">
+												<div class="form-group">
+													<label for="login-email">Email:</label>
+													<input type="email" id="login-email" required>
+													<span class="error-msg" id="login-email-error"></span>
+												</div>
+												<div class="form-group">
+													<label for="login-password">Password:</label>
+													<input type="password" id="login-password" required>
+													<span class="error-msg" id="login-password-error"></span>
+												</div>
+												<button type="submit" class="btn">Login</button>
+											</form>
+										</div>
+									</div>
+
+									<!-- Signup Modal -->
+									<div id="signup-modal" class="modal-overlay" style="display: none;">
+										<div class="modal-content">
+											<span class="close-btn" id="signup-modal-close">&times;</span>
+											<h2>Sign Up</h2>
+											<form id="signup-form">
+												<div class="form-group">
+													<label for="signup-name">Full Name:</label>
+													<input type="text" id="signup-name" required>
+													<span class="error-msg" id="signup-name-error"></span>
+												</div>
+												<div class="form-group">
+													<label for="signup-email">Email:</label>
+													<input type="email" id="signup-email" required>
+													<span class="error-msg" id="signup-email-error"></span>
+												</div>
+												<div class="form-group">
+													<label for="signup-password">Password:</label>
+													<input type="password" id="signup-password" required>
+													<span class="error-msg" id="signup-password-error"></span>
+												</div>
+												<button type="submit" class="btn">Sign Up</button>
+											</form>
+										</div>
+									</div>
+
+
+
+									<!-- The Modal -->
+									<div id="feedbackModal" class="modal">
+										<div class="modal-content">
+											<span class="close" id="closeModalBtn">&times;</span>
+											<h2 style="color: black; font-weight: 750; font-size: 30px;"
+												class="sy-zoo ">GIVE US YOUR
+												VALUABLE FEEDBACK!</h2>
+											<div class="row">
+												<div class="col-6">
+													<label for="fname">Enter Your First Name</label>
+													<input type="text" class="form-control" name="fname" id="fname"
+														required>
+													<span id="fnameerr" class="error"></span>
+												</div>
+												<div class="col-6">
+													<label for="lname">Enter Your Last Name</label>
+													<input type="text" class="form-control" name="lname" id="lname"
+														required>
+													<span id="lnameerr" class="error"></span>
+												</div>
+											</div>
+
+											<label for="emailadd" class="mt-4">Enter Your Email Address</label>
+											<input type="text" name="emailadd" id="emailadd" class="form-control"
+												required>
+											<span id="emailerr" class="error"></span>
+
+											<label for="rating" style="display: block;" class="mt-4">Give Us
+												Rating!</label>
+											<div class="container-fluid p-0" style="display: block;">
+												<div class="star-rating">
+													<input type="radio" id="star5" name="rating" value="5">
+													<label for="star5">&#9733;</label>
+													<input type="radio" id="star4" name="rating" value="4">
+													<label for="star4">&#9733;</label>
+													<input type="radio" id="star3" name="rating" value="3">
+													<label for="star3">&#9733;</label>
+													<input type="radio" id="star2" name="rating" value="2">
+													<label for="star2">&#9733;</label>
+													<input type="radio" id="star1" name="rating" value="1">
+													<label for="star1">&#9733;</label>
+												</div>
+											</div>
+
+											<textarea class="form-control mt-4" name="message" id="message"
+												style="width: 100%;" rows="5"
+												placeholder="Give us Your Valuable Feedback"></textarea>
+											<button class="button mt-4" onclick="submitFeedback()">Send
+												Feedback</button>
+										</div>
+									</div>
+
+									<script>
+										const modal = document.getElementById("feedbackModal");
+										const openModalBtn = document.getElementById("openModalBtn");
+										const closeModalBtn = document.getElementById("closeModalBtn");
+
+										openModalBtn.onclick = function () {
+											modal.style.display = "block";
+										}
+
+										closeModalBtn.onclick = function () {
+											modal.style.display = "none";
+										}
+
+										window.onclick = function (event) {
+											if (event.target === modal) {
+												modal.style.display = "none";
+											}
+										}
+
+										function validateEmail(email) {
+											const re = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+											return re.test(String(email).toLowerCase());
+										}
+
+										function validateName(name) {
+											const re = /^[a-zA-Z]+$/;
+											return re.test(String(name));
+										}
+
+										function submitFeedback() {
+											const fname = document.getElementById('fname').value;
+											const lname = document.getElementById('lname').value;
+											const email = document.getElementById('emailadd').value;
+											const rating = document.querySelector('input[name="rating"]:checked');
+											const message = document.getElementById('message').value;
+											let isValid = true;
+
+											// Validate first name
+											if (fname === "" || !validateName(fname)) {
+												document.getElementById('fnameerr').textContent = "First name is required and should contain only letters.";
+												isValid = false;
+											} else {
+												document.getElementById('fnameerr').textContent = "";
+											}
+
+											// Validate last name
+											if (lname === "" || !validateName(lname)) {
+												document.getElementById('lnameerr').textContent = "Last name is required and should contain only letters.";
+												isValid = false;
+											} else {
+												document.getElementById('lnameerr').textContent = "";
+											}
+
+											// Validate email
+											if (email === "" || !validateEmail(email)) {
+												document.getElementById('emailerr').textContent = "Valid email is required.";
+												isValid = false;
+											} else {
+												document.getElementById('emailerr').textContent = "";
+											}
+
+											// Validate rating
+											if (!rating) {
+												alert("Rating is required.");
+												isValid = false;
+											}
+
+											// If all validations pass
+											if (isValid) {
+												const feedback = {
+													fname,
+													lname,
+													email,
+													rating: rating.value,
+													message
+												};
+
+												localStorage.setItem('feedback', JSON.stringify(feedback));
+												alert("Thank you for your feedback!");
+												modal.style.display = "none"; // Close the modal after submission
+											}
+										}
+									</script>
+
+									<div class="home-border"></div>
+							</div>
+						</div>
+
+	</header>
+	<!-- NAVBAR END -->
+	<!--about-us start -->
+	<section id="home" class="about-us">
+		<div class="container">
+			<div class="about-us-content">
+				<div class="row">
+					<div class="col-sm-12">
+						<div class="single-about-us">
+							<div class="about-us-txt">
+								<h2>
+									Explore the Beauty of the Beautiful World
+
+								</h2>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-0">
+						<div class="single-about-us">
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--about-us end -->
+
+<!-- TRAVEL BOX START -->
+	<section class="travel-box" id="filter">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="single-travel-boxes">
+						<div id="desc-tabs" class="desc-tabs">
+							<ul class="nav nav-tabs" role="tablist">
+								<li role="presentation" class="active">
+									<a href="#tours" aria-controls="tours" role="tab" data-toggle="tab">
+										<i class="fa fa-tree"></i>
+										tours Booking
+									</a>
+								</li>
+							</ul>
+
+							<div class="tab-content">
+								<div role="tabpanel" class="tab-pane active fade in" id="tours">
+									<form class="tab-para">
+										<div class="row">
+											<div class="col-lg-4 col-md-4 col-sm-12">
+												<div class="single-tab-select-box">
+													<h2>Country</h2>
+													<div class="travel-select-icon">
+														<select class="form-control" id="country" name="country"
+															required>
+															<option value="default">Select a country</option>
+														</select>
+													</div>
+													<div class="travel-select-icon">
+														<select class="form-control" id="city" name="city" required>
+															<option value="default">Select a city</option>
+														</select>
+													</div>
+												</div>
+											</div>
+											<div class="col-lg-2 col-md-3 col-sm-4">
+												<div class="single-tab-select-box">
+													<h2>Check in</h2>
+													<div class="travel-check-icon">
+														<form action="#">
+															<input type="date" id="from" name="from"
+																class="form-control">
+														</form>
+													</div>
+												</div>
+											</div>
+											<div class="col-lg-2 col-md-3 col-sm-4">
+												<div class="single-tab-select-box">
+													<h2>Check out</h2>
+													<div class="travel-check-icon">
+														<form action="#">
+															<input type="date" id="to" name="to" required
+																class="form-control">
+														</form>
+													</div>
+												</div>
+											</div>
+											<div class="col-lg-2 col-md-1 col-sm-4">
+												<div class="single-tab-select-box">
+													<h2>duration</h2>
+													<div class="travel-select-icon">
+														<input type="number" id="duration" name="duration" min="1"
+															required class="form-control">
+													</div>
+												</div>
+											</div>
+											<div class="col-lg-2 col-md-1 col-sm-4">
+												<div class="single-tab-select-box">
+													<h2>members</h2>
+													<div class="travel-select-icon">
+														<input type="number" id="members" name="members" min="1"
+															required class="form-control">
+													</div>
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-lg-12 p-2">
+													<div class="about-btn travel-mrt-0 pull-right">
+														<button type="submit" class="about-view travel-btn"
+															id="searchForm" requried>Book Now</button>
+													</div>
+												</div>
+											</div>
+										</div>
+
+									</form>
+								</div>
+
+								<div role="tabpanel" class="tab-pane fade in" id="hotels">
+									<div class="tab-para">
+										<div class="row">
+											<div class="col-lg-4 col-md-4 col-sm-12">
+												<div class="single-tab-select-box">
+													<h2>destination</h2>
+													<div class="travel-select-icon">
+														<select class="form-control ">
+															<option value="default">enter your destination country
+															</option>
+															<option value="turkey">turkey</option>
+															<option value="russia">russia</option>
+															<option value="egept">egypt</option>
+														</select>
+													</div>
+													<div class="travel-select-icon">
+														<select class="form-control ">
+															<option value="default">enter your destination location
+															</option>
+															<option value="istambul">istambul</option>
+															<option value="mosko">mosko</option>
+															<option value="cairo">cairo</option>
+														</select>
+													</div>
+												</div>
+											</div>
+											<div class="col-lg-2 col-md-3 col-sm-4">
+												<div class="single-tab-select-box">
+													<h2>check in</h2>
+													<div class="travel-check-icon">
+														<form action="#">
+															<input type="text" name="check_in" class="form-control"
+																data-toggle="datepicker" placeholder="12 -01 - 2017 ">
+														</form>
+													</div>
+												</div>
+											</div>
+											<div class="col-lg-2 col-md-3 col-sm-4">
+												<div class="single-tab-select-box">
+													<h2>check out</h2>
+													<div class="travel-check-icon">
+														<form action="#">
+															<input type="text" name="check_out" class="form-control"
+																data-toggle="datepicker" placeholder="22 -01 - 2017 ">
+														</form>
+													</div>
+												</div>
+											</div>
+											<div class="col-lg-2 col-md-1 col-sm-4">
+												<div class="single-tab-select-box">
+													<h2>duration</h2>
+													<div class="travel-select-icon">
+														<select class="form-control ">
+															<option value="default">5</option>
+															<option value="10">10</option>
+															<option value="15">15</option>
+															<option value="20">20</option>
+														</select>
+													</div>
+												</div>
+											</div>
+											<div class="col-lg-2 col-md-1 col-sm-4">
+												<div class="single-tab-select-box">
+													<h2>members</h2>
+													<div class="travel-select-icon">
+														<select class="form-control ">
+															<option value="default">1</option>
+															<option value="2">2</option>
+															<option value="4">4</option>
+															<option value="8">8</option>
+														</select>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-sm-5"></div>
+											<div class="col-sm-7">
+												<div class="about-btn travel-mrt-0 pull-right" requried>
+													<button class="about-view travel-btn">Book Now</button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+<!-- TRAVEL BOX END -->
+	<!--packages start-->
+	<section id="pack" class="packages">
+		<div class="container">
+			<div class="gallery-header text-center">
+				<h1>Special Packages</h1>
+				<!-- Filter by continent dropdown -->
+				<div class="filter-container">
+					<select id="continent-filter" class="filter-dropdown">
+						<option value="all">All Continents</option>
+						<option value="africa">Africa</option>
+						<option value="asia">Asia</option>
+						<option value="south america">South America</option>
+						<option value="europe">Europe</option>
+					</select>
+				</div>
+			</div>
+
+			<div id="travel-destinations" class="card-container"></div>
+		</div>
+		<script src="assets/js/script.js"></script>
+	</section>
+	<section class="discount-offer">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12">
+					<div class="dicount-offer-content text-center">
+						<h2>Join with us within 20 September, 2024 and get upto 40% Discount</h2>
+						<div class="campaign-timer">
+							<div id="timer">
+								<div class="time time-after" id="days">
+									<span></span>
+								</div>
+								<div class="time time-after" id="hours">
+
+								</div>
+								<div class="time time-after" id="minutes">
+
+								</div>
+								<div class="time" id="seconds">
+
+								</div>
+							</div>
+						</div>
+						<div class="about-btn">
+							<a href="#filter"><button class="about-view discount-offer-btn">
+									join now
+								</button></a>
+						</div>
+
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<div class="gallary-header text-center">
+		<h1 class="activity">Activities</h1>
+		<!-- Filter by country dropdown -->
+		<div class="filter-container">
+			<select id="country-filter" class="filter-dropdown">
+				<option value="all">All Countries</option>
+
+			</select>
+
+			<!-- Filter by tour name input -->
+			<input type="text" id="tour-filter" placeholder="Search by tour name">
+		</div>
+	</div>
+	<div id="tour-cards" class="card-container"></div>
+	<script src="family/java.js"></script>
+	<!--packages end-->
+	<!-- testemonial Start -->
+	<section class="testemonial">
+		<div class="container">
+
+			<div class="gallary-header text-center">
+				<h2>
+					clients reviews
+				</h2>
+				<p>
+					Duis aute irure dolor in velit esse cillum dolore eu fugiat nulla.
+				</p>
+
+			</div>
+
+			<div class="owl-carousel owl-theme" id="testemonial-carousel">
+
+				<div class="home1-testm item">
+					<div class="home1-testm-single text-center">
+						<div class="home1-testm-img">
+							<img src="assets/images/home/france.jpg" alt="img" />
+						</div>
+						<div class="home1-testm-txt">
+							<span class="icon section-icon">
+								<i class="fa fa-quote-left" aria-hidden="true"></i>
+							</span>
+							<p>
+								Lorem ipsum dolor sit amet, contur adip elit, sed do mod incid ut labore et dolore magna
+								aliqua. Ut enim ad minim veniam.
+							</p>
+							<h3>
+								<a href="#">
+									kevin watson
+								</a>
+							</h3>
+							<h4>london, england</h4>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="home1-testm item">
+					<div class="home1-testm-single text-center">
+						<div class="home1-testm-img">
+							<img src="assets/images/home/france.jpg" alt="img" />
+						</div>
+						<div class="home1-testm-txt">
+							<span class="icon section-icon">
+								<i class="fa fa-quote-left" aria-hidden="true"></i>
+							</span>
+							<p>
+								Lorem ipsum dolor sit amet, contur adip elit, sed do mod incid ut labore et dolore magna
+								aliqua. Ut enim ad minim veniam.
+							</p>
+							<h3>
+								<a href="#">
+									kevin watson
+								</a>
+							</h3>
+							<h4>london, england</h4>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="home1-testm item">
+					<div class="home1-testm-single text-center">
+						<div class="home1-testm-img">
+							<img src="assets/images/home/france.jpg" alt="img" />
+						</div>
+						<div class="home1-testm-txt">
+							<span class="icon section-icon">
+								<i class="fa fa-quote-left" aria-hidden="true"></i>
+							</span>
+							<p>
+								Lorem ipsum dolor sit amet, contur adip elit, sed do mod incid ut labore et dolore magna
+								aliqua. Ut enim ad minim veniam.
+							</p>
+							<h3>
+								<a href="#">
+									kevin watson
+								</a>
+							</h3>
+							<h4>london, england</h4>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="home1-testm item">
+					<div class="home1-testm-single text-center">
+						<div class="home1-testm-img">
+							<img src="assets/images/home/france.jpg" alt="img" />
+						</div>
+						<div class="home1-testm-txt">
+							<span class="icon section-icon">
+								<i class="fa fa-quote-left" aria-hidden="true"></i>
+							</span>
+							<p>
+								Lorem ipsum dolor sit amet, contur adip elit, sed do mod incid ut labore et dolore magna
+								aliqua. Ut enim ad minim veniam.
+							</p>
+							<h3>
+								<a href="#">
+									kevin watson
+								</a>
+							</h3>
+							<h4>london, england</h4>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="home1-testm item">
+					<div class="home1-testm-single text-center">
+						<div class="home1-testm-img">
+							<img src="assets/images/home/france.jpg" alt="img" />
+						</div>
+						<div class="home1-testm-txt">
+							<span class="icon section-icon">
+								<i class="fa fa-quote-left" aria-hidden="true"></i>
+							</span>
+							<p>
+								Lorem ipsum dolor sit amet, contur adip elit, sed do mod incid ut labore et dolore magna
+								aliqua. Ut enim ad minim veniam.
+							</p>
+							<h3>
+								<a href="#">
+									kevin watson
+								</a>
+							</h3>
+							<h4>london, england</h4>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="home1-testm item">
+					<div class="home1-testm-single text-center">
+						<div class="home1-testm-img">
+							<img src="assets/images/home/france.jpg" alt="img" />
+						</div>
+						<div class="home1-testm-txt">
+							<span class="icon section-icon">
+								<i class="fa fa-quote-left" aria-hidden="true"></i>
+							</span>
+							<p>
+								Lorem ipsum dolor sit amet, contur adip elit, sed do mod incid ut labore et dolore magna
+								aliqua. Ut enim ad minim veniam.
+							</p>
+							<h3>
+								<a href="#">
+									kevin watson
+								</a>
+							</h3>
+							<h4>london, england</h4>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="home1-testm item">
+					<div class="home1-testm-single text-center">
+						<div class="home1-testm-img">
+							<img src="assets/images/home/france.jpg" alt="img" />
+						</div>
+						<div class="home1-testm-txt">
+							<span class="icon section-icon">
+								<i class="fa fa-quote-left" aria-hidden="true"></i>
+							</span>
+							<p>
+								Lorem ipsum dolor sit amet, contur adip elit, sed do mod incid ut labore et dolore magna
+								aliqua. Ut enim ad minim veniam.
+							</p>
+							<h3>
+								<a href="#">
+									kevin watson
+								</a>
+							</h3>
+							<h4>london, england</h4>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="home1-testm item">
+					<div class="home1-testm-single text-center">
+						<div class="home1-testm-img">
+							<img src="assets/images/home/france.jpg" alt="img" />
+						</div>
+						<div class="home1-testm-txt">
+							<span class="icon section-icon">
+								<i class="fa fa-quote-left" aria-hidden="true"></i>
+							</span>
+							<p>
+								Lorem ipsum dolor sit amet, contur adip elit, sed do mod incid ut labore et dolore magna
+								aliqua. Ut enim ad minim veniam.
+							</p>
+							<h3>
+								<a href="#">
+									kevin watson
+								</a>
+							</h3>
+							<h4>london, england</h4>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="home1-testm item">
+					<div class="home1-testm-single text-center">
+						<div class="home1-testm-img">
+							<img src="assets/images/home/france.jpg" alt="img" />
+						</div>
+						<div class="home1-testm-txt">
+							<span class="icon section-icon">
+								<i class="fa fa-quote-left" aria-hidden="true"></i>
+							</span>
+							<p>
+								Lorem ipsum dolor sit amet, contur adip elit, sed do mod incid ut labore et dolore magna
+								aliqua. Ut enim ad minim veniam.
+							</p>
+							<h3>
+								<a href="#">
+									kevin watson
+								</a>
+							</h3>
+							<h4>london, england</h4>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+
+	</section>
+	<!-- testemonial End -->
+	<!--special-offer start-->
+	<section id="spo" class="special-offer">
+		<div class="container">
+			<div class="special-offer-content">
+				<div class="row">
+					<div class="col-sm-8">
+						<div class="single-special-offer">
+							<div class="single-special-offer-txt">
+								<h2>thailand</h2>
+								<div class="packages-review special-offer-review">
+									<p>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<span>2544 review</span>
+									</p>
+								</div>
+								<div class="packages-para special-offer-para">
+									<p>
+										<span>
+											<i class="fa fa-angle-right"></i> 5 daays 6 nights
+										</span>
+										<span>
+											<i class="fa fa-angle-right"></i> 2 person
+										</span>
+										<span>
+											<i class="fa fa-angle-right"></i> 5 star accomodation
+										</span>
+									</p>
+									<p>
+										<span>
+											<i class="fa fa-angle-right"></i> transportation
+										</span>
+										<span>
+											<i class="fa fa-angle-right"></i> food facilities
+										</span>
+									</p>
+									<p class="offer-para">
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tem ut
+										labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+										exercitation una <br> ullamco laboris nisi ut aliquip ex ea commodo consequat.
+									</p>
+								</div>
+								<div class="offer-btn-group">
+									<div class="about-btn">
+										<a href="index.html"><button class="about-view packages-btn offfer-btn">
+												make tour
+											</button></a>
+									</div>
+									<div class="about-btn">
+										<a href="#filter"><button class="about-view packages-btn">
+												book now
+											</button></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-4">
+						<div class="single-special-offer">
+							<div class="single-special-offer-bg">
+								<img src="assets/images/offer/offer-shape.png" alt="offer-shape">
+							</div>
+							<div class="single-special-shape-txt">
+								<h3>special offer</h3>
+								<h4><span>40%</span><br>off</h4>
+								<p><span>$999</span><br>reguler $ 1450</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</section>
+	<!--special-offer end-->
+	<!-- About Start -->
+	 <section  id="about">
+	<div class="container-xxl py-5" style="margin: 50px 0;">
+		<div class="container">
+			<div class="row g-5">
+				<div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
+					<div class="position-relative h-100">
+						<img class="img-fluid position-absolute w-100 h-100" src="assets/images/about.webp" alt=""
+							style="object-fit: cover;">
+					</div>
+				</div>
+				<div class="col-lg-6 wow fadeInUp " data-wow-delay="0.3s">
+
+					<h2 class="mb-4">About US<span class="abouth1"></span></h2>
+					<p class="mb-4" style="line-height: 1.8;">TravelSmarter is a renowned tour operator in Pakistan,
+						catering to both groups and
+						individuals visiting the country. They excel in organizing comprehensive travel services,
+						including transportation, accommodation, dining, and guided tours.</p>
+					<p class="mb-4" style="line-height: 1.8;">The company’s various departments work cohesively to
+						ensure top-notch services and
+						foster long-term relationships with clients. </p>
+					<div class="row gy-3 gx-4 mb-4">
+						<div class="col-sm-6">
+							<p class="mb-0"><i class="fa fa-arrow-right  me-2"></i>First Class Flights</p>
+						</div>
+						<div class="col-sm-6">
+							<p class="mb-0"><i class="fa fa-arrow-right  me-2"></i>Handpicked Hotels</p>
+						</div>
+						<div class="col-sm-6">
+							<p class="mb-0"><i class="fa fa-arrow-right  me-2"></i>5 Star Accommodations</p>
+						</div>
+						<div class="col-sm-6">
+							<p class="mb-0"><i class="fa fa-arrow-right me-2"></i>Latest Model Vehicles</p>
+						</div>
+						<div class="col-sm-6">
+							<p class="mb-0"><i class="fa fa-arrow-right  me-2"></i>150 Premium City Tours</p>
+						</div>
+						<div class="col-sm-6">
+							<p class="mb-0"><i class="fa fa-arrow-right  me-2 "></i>24/7 Service</p>
+						</div>
+					</div>
+					<!-- Modal Trigger Button -->
+					<button type="button" class="about-view packages-btn p-5" id="about-read-more-btn">
+						Read More
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+		<!-- Modal Start -->
+		<div id="about-modal" class="about-modal">
+			<div class="about-modal-content">
+				<span class="about-close-btn">&times;</span>
+				<h5>Our Company Values</h5>
+				<h6>Customer Satisfaction</h6>
+				<p>We prioritize our clients and strive to exceed their expectations with excellent service.</p>
+	
+				<h6>Integrity</h6>
+				<p>Honesty and transparency are the cornerstones of our business practices.</p>
+	
+				<h6>Innovation</h6>
+				<p>We continuously innovate to provide modern and seamless travel experiences.</p>
+	
+				<h6>Quality</h6>
+				<p>Delivering high-quality services is our top priority in all aspects of our operations.</p>
+	
+				<h6>Teamwork</h6>
+				<p>We believe in working together to achieve the best results for our clients.</p>
+			</div>
+		</div>
+		<!-- Modal End -->
+	
+	<!-- javascript -->
+	<script>
+		var amodal = document.getElementById("about-modal");
+
+		var btn = document.getElementById("about-read-more-btn");
+
+		var span = document.getElementsByClassName("about-close-btn")[0];
+
+		btn.onclick = function () {
+			amodal.style.display = "block";
+		}
+
+		span.onclick = function () {
+			amodal.style.display = "none";
+		}
+
+		window.onclick = function (event) {
+			if (event.target == amodal) {
+				amodal.style.display = "none";
+			}
+		}
+	</script>
+	</section>
+	<!-- About End -->
+	<!-- CONTACT START  -->
+	<section id="subs" class="subscribe">
+
+		<section id="contact">
+			<div class="container-xxl py-5">
+				<h1 class="section-title text-center px-3" id="contact">Contact Us</h1>
+				<div class="container p-5">
+					<div class="row g-4">
+						<!-- Contact Info -->
+						<div class="col-lg-4 col-md-6">
+							<h2 id="contacth1">Get in Touch</h2>
+							<p class="contactp">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam
+								amet diam et eos</p>
+							<div class="d-flex align-items-center mb-4">
+								<div class="flex-shrink-0 bg-primary">
+									<i class="bi bi-building-fill text-white"></i>
+								</div>
+								<div class="ms-3">
+									<h5>Office</h5>
+									<p>123 Street, New York, USA</p>
+								</div>
+							</div>
+							<div class="d-flex align-items-center mb-4">
+								<div class="flex-shrink-0 bg-primary">
+									<i class="bi bi-telephone-fill text-white"></i>					
+											</div>
+								<div class="ms-3">
+									<h5>Mobile</h5>
+									<p>+312 8548296</p>
+								</div>
+							</div>
+							<div class="d-flex align-items-center">
+								<div class="flex-shrink-0 bg-primary">
+									<i class="fa fa-envelope-open text-white"></i>
+								</div>
+								<div class="ms-3">
+									<h5>Email</h5>
+									<p>btwitsfadi@gmail.com</p>
+								</div>
+							</div>
+						</div>
+
+						<!-- Google Maps -->
+						<div class="col-lg-4 col-md-6">
+							<iframe class="w-100 h-100" src="https://www.google.com/maps/embed?pb=..."
+								style="min-height: 300px;"></iframe>
+						</div>
+
+						<!-- Contact Form -->
+						<div class="col-lg-4 col-md-12">
+							<form id="contactForm">
+								<div class="row g-3">
+									<!-- Name Field -->
+									<div class="col-md-6">
+										<div class="form-floating">
+											<label for="name">Your Name</label>
+											<input type="text" class="form-control" id="name" placeholder="Your Name"
+												required minlength="2" maxlength="50" pattern="[A-Za-z\s]+"
+												title="Name should contain only letters">
+
+										</div>
+									</div>
+
+									<!-- Email Field -->
+									<div class="col-md-6">
+										<div class="form-floating">
+											<label for="email">Your Email</label>
+											<input type="email" class="form-control" id="email" placeholder="Your Email"
+												required>
+
+										</div>
+									</div>
+
+									<!-- Subject Field -->
+									<div class="col-12">
+										<div class="form-floating">
+											<label for="subject">Subject</label>
+											<input type="text" class="form-control" id="subject" placeholder="Subject"
+												required minlength="3" maxlength="100">
+
+										</div>
+									</div>
+
+									<!-- Message Field -->
+									<div class="col-12">
+										<div class="form-floating">
+											<label for="message">Message</label>
+											<textarea class="form-control" id="message"
+												placeholder="Leave a message here" style="height: 100px" required
+												minlength="10"></textarea>
+
+										</div>
+									</div>
+
+									<!-- Submit Button -->
+									<div class="col-12">
+										<button class="btn btn-primary w-100 py-3" type="submit">Send Message</button>
+									</div>
+								</div>
+							</form>
+
+							<script>
+								document.getElementById('contactForm').addEventListener('submit', function (event) {
+									event.preventDefault();
+
+									// Form Validation
+									if (this.checkValidity()) {
+										// Get form values
+										const name = document.getElementById('name').value;
+										const email = document.getElementById('email').value;
+										const subject = document.getElementById('subject').value;
+										const message = document.getElementById('message').value;
+
+										// Save data to localStorage
+										const contactData = {
+											name: name,
+											email: email,
+											subject: subject,
+											message: message
+										};
+										localStorage.setItem('contactFormData', JSON.stringify(contactData));
+
+										// Show a success alert
+										alert("Form submitted successfully!");
+
+										// Optionally clear the form after submission
+										this.reset();
+									} else {
+										// Show validation error messages
+										this.reportValidity();
+									}
+								});
+							</script>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- CONTACT END  -->
+	</section>
+	<div id="countryList"></div>
+	<!-- footer-copyright start -->
+	<footer class="footer-copyright">
+		<div class="container">
+			<div class="footer-content">
+				<div class="row">
+
+					<div class="col-sm-3">
+						<div class="single-footer-item">
+							<div class="footer-logo">
+								<a href="index.html">
+									Traval<span> Smart</span>
+								</a>
+								<p>
+									best travel smart agency
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-sm-3">
+						<div class="single-footer-item">
+							<h2>link</h2>
+							<div class="single-footer-txt">
+								<p><a href="index.html">home</a></p>
+								<p><a href="#filter">Trip Catalog</a></p>
+								<p><a href="#about">About Us</a></p>
+								<p><a href="#subs">contact Us</a></p>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="col-sm-3">
+						<div class="single-footer-item">
+							<h2>popular destination</h2>
+							<div class="single-footer-txt">
+								<p><a href="#">Asia</a></p>
+								<p><a href="#">South Amreica</a></p>
+								<p><a href="#">Antarctica</a></p>
+								<p><a href="#">North Amreica</a></p>
+								<p><a href="#">Australia</a></p>
+								<p><a href="#">Africa</a></p>
+
+
+							</div>
+						</div>
+					</div>
+
+					<div class="col-sm-3">
+						<div class="single-footer-item text-center">
+							<h2 class="text-left">contacts</h2>
+							<div class="single-footer-txt text-left">
+								<p>+92 312 8548296</p>
+								<p class="foot-email"><a href="#">info@fahad.com</a></p>
+								<p>North Amrecia Park </p>
+								<p> USA</p>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+			<hr>
+			<div class="foot-icons ">
+				<ul class="footer-social-links list-inline list-unstyled">
+					<li><a href="https://aptech-education.com.pk/" target="_blank" class="foot-icon-bg-1"><i
+								class="fa fa-facebook"></i></a></li>
+					<li><a href="https://aptech-education.com.pk/" target="_blank" class="foot-icon-bg-2"><i
+								class="fa fa-twitter"></i></a></li>
+					<li><a href="https://aptech-education.com.pk/" target="_blank" class="foot-icon-bg-3"><i
+								class="fa fa-instagram"></i></a></li>
+				</ul>
+				<p>&copy; 2024 <a href="#index,html">Fahad</a>. All Right Reserved</p>
+
+			</div>
+			<div id="scroll-Top">
+				<i class="fa fa-angle-double-up return-to-top" id="scroll-top" data-toggle="tooltip"
+					data-placement="top" title="" data-original-title="Back to Top" aria-hidden="true"></i>
+			</div>
+		</div>
+
+	</footer>
+	<!-- footer-copyright end -->
+	<div id="hotelsModal" class="hotel-modal hidden">
+	</div>
+
+	<script src="assets/js/jquery.js"></script>
+
+	<!--modernizr.min.js-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+
+
+	<!--bootstrap.min.js-->
+	<script src="assets/js/bootstrap.min.js"></script>
+
+	<!-- bootsnav js -->
+	<script src="assets/js/bootsnav.js"></script>
+
+	<!-- jquery.filterizr.min.js -->
+	<script src="assets/js/jquery.filterizr.min.js"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+
+	<!--jquery-ui.min.js-->
+	<script src="assets/js/jquery-ui.min.js"></script>
+
+	<!-- counter js -->
+	<script src="assets/js/jquery.counterup.min.js"></script>
+	<script src="assets/js/waypoints.min.js"></script>
+
+	<!--owl.carousel.js-->
+	<script src="assets/js/owl.carousel.min.js"></script>
+
+	<!-- jquery.sticky.js -->
+	<script src="assets/js/jquery.sticky.js"></script>
+
+	<!--Custom JS-->
+	<script src="assets/js/custom.js"></script>
+
+	<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+	<!--Main JS-->
+	<script src="./assets/js/main.js"></script>
+</body>
+
+</html>
