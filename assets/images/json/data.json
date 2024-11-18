@@ -1,0 +1,92 @@
+[
+    {
+        "continent":"afirca",
+        "country":[
+            {
+                "name":"morocco",
+                "image":"image/mexico.jpeg",
+                "price":"$300",
+                "description":"Discover the vibrant culture and stunning landscapes of Morocco, where ancient cities meet the sweeping Sahara desert.",
+                "people":"2",
+                "days":"3"  
+            }
+            ,
+            {
+                "name":"kenya",
+                "image":"image/kenya.jpeg  ",
+                "price":"$200",
+                "description":" Kenya offers stunning safaris, diverse wildlife, and rich cultural experiences.",
+                "people":"2",
+                "days":"3"  
+            }
+        ]
+
+    },
+    {
+    "continent":"asia",
+        "country":[
+            {
+                "name":"thailand",
+                "image":"image/thailand.jpeg",
+                "price":"$500",
+                "description":"Thailand is a tropical paradise famous for its beaches and vibrant culture.",
+                "people":"2",
+                "days":"3"  
+            },
+            {
+                "name":"malaysia",
+                "image":"images/malaysia.jpg",
+                "price":"$400",
+                "description":"Malaysia features vibrant cities, lush jungles, and beautiful beaches.",
+                "people":"2",
+                "days":"3"  
+            }
+        ]
+    },
+    {
+        "continent":"south america",
+            "country":[
+                {
+                    "name":"argentina",
+                    "image":"image/argentina.jpg",
+                    "price":"$400",
+                    "description":"Argentina is a diverse South American country known for its landscapes, tango, and rich cuisine.",
+                    "people":"2",
+                    "days":"3"  
+                },
+                {
+                    "name":"brazil",
+                    "image":"image/brazil.jpeg",
+                    "price":"$300",
+                    "description":"Brazil boasts stunning landscapes, lively culture, and beautiful beaches.",
+                    "people":"2",
+                    "days":"3"  
+                }
+            ]
+        },
+        {
+            "continent":"europe",
+                "country":[
+                    {
+                        "name":"france",
+                        "image":"image/france.jpg",
+                        "price":"$600",
+                        "description":"France is renowned for its art, cuisine, and romantic landscapes.",
+                        "people":"2",
+                        "days":"3"  
+                    },
+                    {
+                        "name":"spain",
+                        "image":"image/spain.jpg",
+                        "price":"$500",
+                        "description":"Spain features historic cities, stunning architecture, vibrant festivals, and delicious tapas.",
+                        "people":"2",
+                        "days":"3"  
+                    }
+                ]
+
+                }
+                 
+        
+
+]

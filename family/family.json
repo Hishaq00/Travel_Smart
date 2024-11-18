@@ -1,0 +1,50 @@
+{
+    "countries": [
+        {
+            "name": "Luxury Tour",
+            "favoritefamilyTours": [
+                {
+                    "tourName": "Atlas Mountain Trekking",
+                    "details": "Embark on a multi-day trek through the Atlas Mountains, exploring stunning landscapes and Berber villages.",
+                    "images":"image1/morocco.jpg",
+                    "price" : 200
+                
+                }
+            ]
+        },
+        {
+            "name": "Family Tour",
+            "favoritefamilyTours": [
+                {
+                    "tourName": "MaasaiMara Wildlife Safari",
+                    "details": "Join guided safaris to witness the Great Migration and explore the incredible wildlife of Maasai Mara.",
+                     "images":"image1/masaimara.jpg",
+                     "price" : 400
+                }
+            ]
+        },
+        {
+            "name": "Adventure Tour",
+            "favoritefamilyTours": [
+                {
+                    "tourName": "Chiang Mai Zip Lining",
+                    "details": "Soar through the treetops on a thrilling zip line adventure in the jungles of Chiang Mai.",
+                   "images":"image1/masaimara.jpg",
+                   "price" : 150
+                }
+                
+            ]
+        },
+        {
+            "name": "Cultural Tour",
+            "favoritefamilyTours": [
+                {
+                    "tourName": "Borneo Rainforest Adventure",
+                    "details": "Trek through the pristine rainforests of Borneo, spotting wildlife and exploring caves.",
+                      "images":"image1/masaimara.jpg",
+                      "price" : 400
+                }
+            ]
+        }
+           ]
+}
